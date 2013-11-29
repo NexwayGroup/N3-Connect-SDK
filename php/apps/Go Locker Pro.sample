@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NexwayConnect xsi:noNamespaceSchemaLocation="nexway-connect-envelope.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Header>
+        <DocumentVersion>1.00</DocumentVersion>
+    </Header>
+    <MessageType>Apps</MessageType>
+    <Message OperationType="INSERT">
+        <Apps Type="AndroidApp">
+            <AndroidApp>
+                <Sku>com.jiubang.goscreenlock.pro</Sku>
+                <SellTo>
+                    <Country Code="FR" />
+                    <Country Code="GB" />
+                    <Country Code="DE" />
+                </SellTo>
+                <Category>ab</Category>
+                <Descriptions>
+                    <DefaultDescription>
+                        <Title><![CDATA[GO Locker Pro]]></Title>
+                        <Short><![CDATA[GO Locker Pro is a standalone, premium version of GO Locker!.]]></Short>
+                        <Long><![CDATA[The top rated UI locker in Kurio Store. Premium themes (cost more than $8 if well...)]]></Long>
+                    </DefaultDescription>
+                    <Description Language="fr">
+                        <Title><![CDATA[GO Locker Pro]]></Title>
+                        <Short><![CDATA[GO Locker Pro est une version indépendante et premium de GO Locker !]]></Short>
+                        <Long><![CDATA[GO Locker Pro est une version indépendante et premium de GO Locker !]]></Long>
+                    </Description>
+                </Descriptions>
+                <Prices>
+                    <DefaultPrice Currency="USD">
+                        <Regular>0.99</Regular>
+                    </DefaultPrice>
+                    <Price Currency="EUR">
+                        <Regular>0.99</Regular>
+                    </Price>
+                </Prices>
+                <AgeLimit>
+                  <AgeMin>6</AgeMin>
+                  <AgeMax>12</AgeMax>
+                </AgeLimit>
+                <Medias>
+                    <Icon><![CDATA[http://playground.devceble.telechargement.fr/apk/media/go-locker-pro.png]]></Icon>
+                    <Screenshot><![CDATA[http://playground.devceble.telechargement.fr/apk/media/go-locker-scr1.jpg]]></Screenshot>
+                    <Screenshot><![CDATA[http://playground.devceble.telechargement.fr/apk/media/go-locker-scr2.jpg]]></Screenshot>
+                    <Screenshot><![CDATA[http://playground.devceble.telechargement.fr/apk/media/go-locker-scr3.jpg]]></Screenshot>
+                    <Screenshot><![CDATA[http://playground.devceble.telechargement.fr/apk/media/go-locker-scr4.jpg]]></Screenshot>
+                </Medias>
+            </AndroidApp>
+        </Apps>
+    </Message>
+</NexwayConnect>

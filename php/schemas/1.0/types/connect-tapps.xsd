@@ -1,0 +1,195 @@
+<?xml version="1.0"?>
+<!-- "$Revision: #3 $" -->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <!--
+    $Date: 2013/07/03 $
+    NEXWAY.COM CONFIDENTIAL. This document and the information contained in it are
+    confidential and proprietary information of nexway and may not be reproduced,
+    distributed or used, in whole or in part, for any purpose other than as necessary
+    to list products for sale on Nexway's network or partners network.
+    -->
+    <xsd:include schemaLocation="../connect-types.xsd"/>
+
+    <!-- TAppAge -->
+    <xsd:complexType name="TAppAgeLimit">
+        <xsd:sequence>
+            <!-- AgeMin -->
+            <xsd:element name="AgeMin">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:enumeration value="3"/>
+                        <xsd:enumeration value="6"/>
+                        <xsd:enumeration value="9"/>
+                        <xsd:enumeration value="12"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+            <!-- AgeMax -->
+            <xsd:element name="AgeMax" minOccurs="0">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:enumeration value="3"/>
+                        <xsd:enumeration value="6"/>
+                        <xsd:enumeration value="9"/>
+                        <xsd:enumeration value="12"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <!-- TAppType -->
+    <xsd:simpleType name="TAppType">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="AndroidApp"/>
+            <xsd:enumeration value="FreeAndroidApp"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <!-- TAppVersionLabel -->
+    <xsd:simpleType name="TAppVersionLabel">
+        <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="15"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <!-- TAppChangeLog -->
+    <xsd:complexType name="TAppChangeLog">
+        <xsd:sequence>
+            <!-- Description with default language -->
+            <xsd:element name="Revision" maxOccurs="unbounded">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="Log" maxOccurs="unbounded">
+                            <xsd:complexType>
+                                <xsd:simpleContent>
+                                    <xsd:extension base="xsd:string">
+                                        <xsd:attribute name="Language" use="required" type="TLanguage"/>
+                                    </xsd:extension>
+                                </xsd:simpleContent>
+                            </xsd:complexType>
+                        </xsd:element>
+                    </xsd:sequence>
+                    <!-- Version & Version label -->
+                    <xsd:attribute name="Version" use="required" type="xsd:int"/>
+                    <xsd:attribute name="VersionLabel" use="required" type="TAppVersionLabel"/>
+                </xsd:complexType>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <!-- TApps -->
+    <xsd:complexType name="TApps">
+        <xsd:sequence>
+            <xsd:choice>
+                <!-- AndroidApp -->
+                <xsd:element name="AndroidApp" type="TAndroidApp" />
+                <xsd:element name="FreeAndroidApp" type="TFreeAndroidApp" />
+                <!-- /AndroidApp -->
+            </xsd:choice>
+        </xsd:sequence>
+        <xsd:attribute name="Type" use="required" type="TAppType"/>
+    </xsd:complexType>
+
+    <!-- TApp -->
+    <xsd:complexType name="TApp">
+        <xsd:complexContent>
+            <xsd:extension base="TProduct">
+                <xsd:sequence>
+                    <xsd:element name="Items" type="TAppItems"/>
+                </xsd:sequence>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+
+    <!-- TAppItems -->
+    <xsd:complexType name="TAppItems">
+        <xsd:sequence>
+            <xsd:element name="Item" type="TAppItem" maxOccurs="unbounded"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <!-- TAppItemBase -->
+    <xsd:complexType name="TAppItemBase">
+        <xsd:complexContent>
+            <xsd:restriction base="TApp">
+                <xsd:sequence>
+                    <xsd:element name="Sku" type="xsd:string"/>
+                    <xsd:element name="Descriptions" type="TDescriptions"/>
+                    <xsd:element name="Prices" type="TPrices"/>
+                </xsd:sequence>
+            </xsd:restriction>
+        </xsd:complexContent>
+    </xsd:complexType>
+
+    <!-- TAppItem -->
+    <xsd:complexType name="TAppItem">
+        <xsd:complexContent>
+            <xsd:extension base="TAppItemBase">
+                <xsd:attribute name="Type" type="TAppItemType"/>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+
+    <!-- Item type -->
+    <xsd:simpleType name="TAppItemType">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="CONSUMABLE"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <!-- TAndroidApp -->
+    <xsd:complexType name="TAndroidApp">
+        <xsd:complexContent>
+            <xsd:restriction base="TApp">
+                <xsd:sequence>
+                    <xsd:element name="Sku" type="xsd:string"/>
+                    <xsd:element name="SellTo" type="TSellTo" minOccurs="0"/>
+                    <xsd:element name="Category" type="TCategories"/>
+                    <xsd:element name="Descriptions" type="TDescriptions"/>
+                    <xsd:element name="Prices" type="TPrices"/>
+                    <xsd:element name="AgeLimit" type="TAppAgeLimit" minOccurs="0"/>
+                    <xsd:element name="Related" type="TSkuList" minOccurs="0"/>
+                    <xsd:element name="Items" type="TAppItems" minOccurs="0"/>
+                    <!-- Media element -->
+                    <xsd:element name="Medias">
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element name="YoutubeVideo" minOccurs="0" type="TYouTubeUrl"/>
+                                <xsd:element name="Icon" type="TUrl"/>
+                                <xsd:element name="Screenshot" type="TUrl" minOccurs="2" maxOccurs="unbounded"/>
+                            </xsd:sequence>
+                        </xsd:complexType>
+                    </xsd:element>
+                </xsd:sequence>
+            </xsd:restriction>
+        </xsd:complexContent>
+    </xsd:complexType>
+
+    <!-- TFreeAndroidApp -->
+    <xsd:complexType name="TFreeAndroidApp">
+        <xsd:complexContent>
+            <xsd:restriction base="TAndroidApp">
+                <xsd:sequence>
+                    <xsd:element name="Sku" type="xsd:string"/>
+                    <xsd:element name="SellTo" type="TSellTo" minOccurs="0"/>
+                    <xsd:element name="Category" type="TCategories"/>
+                    <xsd:element name="Descriptions" type="TDescriptions"/>
+                    <xsd:element name="AgeLimit" type="TAppAgeLimit" minOccurs="0"/>
+                    <xsd:element name="Related" type="TSkuList" minOccurs="0"/>
+                    <xsd:element name="Items" type="TAppItems" minOccurs="0"/>
+                    <!-- Media element -->
+                    <xsd:element name="Medias">
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element name="YoutubeVideo" minOccurs="0" type="TYouTubeUrl"/>
+                                <xsd:element name="Icon" type="TUrl"/>
+                                <xsd:element name="Screenshot" type="TUrl" minOccurs="2" maxOccurs="unbounded"/>
+                            </xsd:sequence>
+                        </xsd:complexType>
+                    </xsd:element>
+                </xsd:sequence>
+            </xsd:restriction>
+        </xsd:complexContent>
+    </xsd:complexType>
+</xsd:schema>

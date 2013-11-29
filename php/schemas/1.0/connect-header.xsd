@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!-- "$Revision: #3 $" -->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <!--
+    $Date: 2013/07/03 $
+    NEXWAY.COM CONFIDENTIAL. This document and the information contained in it are
+    confidential and proprietary information of nexway and may not be reproduced,
+    distributed or used, in whole or in part, for any purpose other than as necessary
+    to list products for sale on Nexway's network or partners network.
+    -->
+    <xsd:element name="Header">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="DocumentVersion">
+                    <xsd:simpleType>
+                        <xsd:restriction base="xsd:string">
+                            <xsd:pattern value="\d{1,2}\.\d{1,2}" />
+                        </xsd:restriction>
+                    </xsd:simpleType>
+                </xsd:element>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>

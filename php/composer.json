@@ -1,0 +1,10 @@
+{
+    "require": {
+        "symfony/console": "2.5.*@dev",
+        "symfony/config": "2.5.*@dev",
+        "symfony/yaml": "2.5.*@dev"
+    },
+    "autoload": {
+        "psr-0": { "Connect" : "src/" }
+    }
+}

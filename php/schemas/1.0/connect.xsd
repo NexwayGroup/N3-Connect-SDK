@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!-- Revision 1.0 -->
+<xsd:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <!--
+    NEXWAY.COM CONFIDENTIAL. This document and the information contained in it are
+    confidential and proprietary information of nexway and may not be reproduced,
+    distributed or used, in whole or in part, for any purpose other than as necessary
+    to list products for sale on Nexway's network or partners network.
+    -->
+    <xsd:include schemaLocation="connect-types.xsd"/>
+    <xsd:include schemaLocation="connect-header.xsd"/>
+    <xsd:simpleType name="TOperationType">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="INSERT"/>
+            <xsd:enumeration value="UPDATE"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:element name="NexwayConnect">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="Header"/>
+                <xsd:element name="MessageType">
+                    <xsd:simpleType>
+                        <xsd:restriction base="xsd:string">
+                            <xsd:enumeration value="Apps"/>
+                        </xsd:restriction>
+                    </xsd:simpleType>
+                </xsd:element>
+                <!-- Message -->
+                <xsd:element name="Message">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:choice>
+                                <!-- Apps -->
+                                <xsd:element name="Apps" type="TApps">
+                                    <xsd:unique name="EnsureUniqueAppSKU">
+                                        <xsd:selector xpath="AndroidApp"/>
+                                        <xsd:field xpath="Sku"/>
+                                    </xsd:unique>
+                                </xsd:element>
+                                <!-- /Apps -->
+                            </xsd:choice>
+                        </xsd:sequence>
+                        <xsd:attribute name="OperationType" use="required" type="TOperationType"/>
+                    </xsd:complexType>
+                </xsd:element>
+                <!-- /Message -->
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>

@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<!--
+$Date: 2013/07/03 $
+NEXWAY.COM CONFIDENTIAL. This document and the information contained in it are
+confidential and proprietary information of nexway and may not be reproduced,
+distributed or used, in whole or in part, for any purpose other than as necessary
+to list products for sale on Nexway's network or partners network.
+-->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <!-- TStatus -->
+    <xsd:simpleType name="TStatus">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="ENABLED"/>
+            <xsd:enumeration value="DISABLED"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <!-- TShortDescription -->
+    <xsd:simpleType name="TShortDescription">
+        <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="255"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <!-- TDescriptions -->
+    <xsd:complexType name="TDescriptions">
+        <xsd:sequence>
+            <!-- Description with default language -->
+            <xsd:element name="DefaultDescription">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="Title" type="xsd:string"/>
+                        <xsd:element name="Short" type="TShortDescription"/>
+                        <xsd:element name="Long"  type="xsd:string"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <!-- Description with other languages -->
+            <xsd:element name="Description" minOccurs="0" maxOccurs="unbounded">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="Title" type="xsd:string"/>
+                        <xsd:element name="Short" type="TShortDescription"/>
+                        <xsd:element name="Long" type="xsd:string"/>
+                    </xsd:sequence>
+                    <xsd:attribute name="Language" use="required" type="TLanguage"/>
+                </xsd:complexType>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <!-- TSellTo -->
+    <xsd:complexType name="TSellTo">
+        <xsd:sequence>
+            <!-- Country -->
+            <xsd:element name="Country" maxOccurs="unbounded">
+                <xsd:complexType>
+                    <!-- Code attribute -->
+                    <xsd:attribute name="Code" use="required">
+                        <xsd:simpleType>
+                            <xsd:restriction base="xsd:string">
+                                <xsd:pattern value="\w{2}" />
+                            </xsd:restriction>
+                        </xsd:simpleType>
+                    </xsd:attribute>
+                    <!-- /Code -->
+                </xsd:complexType>
+            </xsd:element>
+            <!-- /Country -->
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <!-- TProduct -->
+    <xsd:complexType name="TProduct">
+        <xsd:sequence>
+            <xsd:element name="Sku" type="xsd:string"/>
+            <xsd:element name="Status" type="TStatus"/>
+            <xsd:element name="SellTo" type="TSellTo" minOccurs="0"/>
+            <xsd:element name="Descriptions" type="TDescriptions"/>
+            <xsd:element name="Prices" type="TPrices"/>
+            <xsd:element name="Category" type="TCategories"/>
+            <xsd:element name="Related" type="TSkuList" minOccurs="0"/>
+            <xsd:element name="UpSell" type="TSkuList" minOccurs="0"/>
+            <xsd:element name="CrossSell" type="TSkuList" minOccurs="0"/>
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:schema>

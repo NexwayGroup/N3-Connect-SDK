@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<!-- "$Revision: #3 $" -->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <!--
+    $Date: 2013/07/03 $
+    NEXWAY.COM CONFIDENTIAL. This document and the information contained in it are
+    confidential and proprietary information of nexway and may not be reproduced,
+    distributed or used, in whole or in part, for any purpose other than as necessary
+    to list products for sale on Nexway's network or partners network.
+    -->
+    <xsd:include schemaLocation="../connect-types.xsd"/>
+    <!-- TCurrency -->
+    <xsd:simpleType name="TCurrency">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="EUR"/>
+            <xsd:enumeration value="CHF"/>
+            <xsd:enumeration value="GBP"/>
+            <xsd:enumeration value="SEK"/>
+            <xsd:enumeration value="USD"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <!-- TAmountSpecial -->
+    <xsd:complexType name="TAmountWithDate">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:double">
+                <xsd:attribute name="FromDate" type="xsd:date"/>
+                <xsd:attribute name="ToDate" type="xsd:date"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <!-- TPrices -->
+    <xsd:complexType name="TPrices">
+        <xsd:sequence>
+            <xsd:element name="DefaultPrice" type="TPrice"/>
+            <xsd:element name="Price" type="TPrice" minOccurs="0" maxOccurs="unbounded"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <!-- TPrice -->
+    <xsd:complexType name="TPrice">
+        <xsd:sequence>
+            <xsd:element name="Regular" type="xsd:double" />
+            <xsd:element name="Special" type="xsd:double" minOccurs="0"/>
+        </xsd:sequence>
+        <xsd:attribute name="Currency" type="TCurrency" use="required"/>
+        <xsd:attribute name="Default" type="xsd:boolean" fixed="true" />
+    </xsd:complexType>
+</xsd:schema>

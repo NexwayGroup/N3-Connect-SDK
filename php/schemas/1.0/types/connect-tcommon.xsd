@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!-- "$Revision: #3 $" -->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <!--
+    $Date: 2013/07/03 $
+    NEXWAY.COM CONFIDENTIAL. This document and the information contained in it are
+    confidential and proprietary information of nexway and may not be reproduced,
+    distributed or used, in whole or in part, for any purpose other than as necessary
+    to list products for sale on Nexway's network or partners network.
+    -->
+    <!-- Simple SKU list -->
+    <xsd:complexType name="TSkuList">
+        <xsd:sequence>
+            <xsd:element name="Sku" type="xsd:string" maxOccurs="unbounded"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <!-- URL type -->
+    <xsd:simpleType name="TUrl">
+        <xsd:restriction base="xsd:anyURI">
+            <!-- accepts only http:// or https:// URIs. -->
+            <xsd:pattern value='https?://.+'/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="TYouTubeUrl">
+        <xsd:restriction base="xsd:anyURI">
+            <!-- accepts only http://www.youtube or https://www.youtube for URIs. -->
+            <xsd:pattern value='https?://www\.youtube.+'/>
+        </xsd:restriction>
+    </xsd:simpleType>
+</xsd:schema>
