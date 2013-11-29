@@ -26,7 +26,7 @@ When you're ready to go live, create similar input files with a **.xml** extensi
 
 When you're ready, launch that command using a PHP interpreter on the commandline. **apps** is the relative or absolute path of Directory you want to process.
 
-  $ php console.php connect:import apps
+	$ php console.php connect:import apps
 
 To validate the file locally against XML schemas, pass the *--validate* optional flag.
 
