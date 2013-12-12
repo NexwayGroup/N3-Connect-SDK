@@ -151,7 +151,7 @@ class ImportCommand extends Command
             // If we deal with a file
             if ($file->isFile()) {
                 $mime = mime_content_type($file->getPathName());
-                if ($mime !== self::XML_MIME || !$file->isReadable() || !$file->getExtension() !== 'xml') {
+                if ($mime !== self::XML_MIME || !$file->isReadable() || $file->getExtension() !== 'xml') {
                     $this->output->writeln(sprintf('<comment>Ignore %s (wrong mime/extension/unreadable)</comment>', $file->getFilename()));
                     continue;
                 }

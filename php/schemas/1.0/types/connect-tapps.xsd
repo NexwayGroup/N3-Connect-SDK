@@ -157,6 +157,7 @@
                             <xsd:sequence>
                                 <xsd:element name="YoutubeVideo" minOccurs="0" type="TYouTubeUrl"/>
                                 <xsd:element name="Icon" type="TUrl"/>
+                                <xsd:element name="Promotional" type="TUrl" minOccurs="0"/>
                                 <xsd:element name="Screenshot" type="TUrl" minOccurs="2" maxOccurs="unbounded"/>
                             </xsd:sequence>
                         </xsd:complexType>
@@ -184,6 +185,7 @@
                             <xsd:sequence>
                                 <xsd:element name="YoutubeVideo" minOccurs="0" type="TYouTubeUrl"/>
                                 <xsd:element name="Icon" type="TUrl"/>
+                                <xsd:element name="Promotional" type="TUrl" minOccurs="0"/>
                                 <xsd:element name="Screenshot" type="TUrl" minOccurs="2" maxOccurs="unbounded"/>
                             </xsd:sequence>
                         </xsd:complexType>
