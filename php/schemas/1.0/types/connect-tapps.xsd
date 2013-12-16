@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<!-- "$Revision: #3 $" -->
+<!-- "$Revision: #3.2 $" -->
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
     <!--
-    $Date: 2013/07/03 $
+    $Date: 2013/12/16 $
     NEXWAY.COM CONFIDENTIAL. This document and the information contained in it are
     confidential and proprietary information of nexway and may not be reproduced,
     distributed or used, in whole or in part, for any purpose other than as necessary
@@ -138,11 +138,21 @@
         </xsd:restriction>
     </xsd:simpleType>
 
+    <!-- Media type -->
+    <xsd:complexType name="TAppMedias">
+        <xsd:sequence>
+            <xsd:element name="YoutubeVideo" minOccurs="0" type="TYouTubeUrl"/>
+            <xsd:element name="Icon" type="TUrl" maxOccurs="1"/>
+            <xsd:element name="Promotional" type="TUrl" minOccurs="0"/>
+            <xsd:element name="Screenshot" type="TUrl" minOccurs="2" maxOccurs="unbounded"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
     <!-- TAndroidApp -->
     <xsd:complexType name="TAndroidApp">
         <xsd:complexContent>
             <xsd:restriction base="TApp">
-                <xsd:sequence>
+                <xsd:all>
                     <xsd:element name="Sku" type="xsd:string"/>
                     <xsd:element name="SellTo" type="TSellTo" minOccurs="0"/>
                     <xsd:element name="Category" type="TCategories"/>
@@ -152,17 +162,8 @@
                     <xsd:element name="Related" type="TSkuList" minOccurs="0"/>
                     <xsd:element name="Items" type="TAppItems" minOccurs="0"/>
                     <!-- Media element -->
-                    <xsd:element name="Medias">
-                        <xsd:complexType>
-                            <xsd:sequence>
-                                <xsd:element name="YoutubeVideo" minOccurs="0" type="TYouTubeUrl"/>
-                                <xsd:element name="Icon" type="TUrl"/>
-                                <xsd:element name="Promotional" type="TUrl" minOccurs="0"/>
-                                <xsd:element name="Screenshot" type="TUrl" minOccurs="2" maxOccurs="unbounded"/>
-                            </xsd:sequence>
-                        </xsd:complexType>
-                    </xsd:element>
-                </xsd:sequence>
+                    <xsd:element name="Medias" type="TAppMedias"/>
+                </xsd:all>
             </xsd:restriction>
         </xsd:complexContent>
     </xsd:complexType>
@@ -171,7 +172,7 @@
     <xsd:complexType name="TFreeAndroidApp">
         <xsd:complexContent>
             <xsd:restriction base="TAndroidApp">
-                <xsd:sequence>
+                <xsd:all>
                     <xsd:element name="Sku" type="xsd:string"/>
                     <xsd:element name="SellTo" type="TSellTo" minOccurs="0"/>
                     <xsd:element name="Category" type="TCategories"/>
@@ -180,17 +181,8 @@
                     <xsd:element name="Related" type="TSkuList" minOccurs="0"/>
                     <xsd:element name="Items" type="TAppItems" minOccurs="0"/>
                     <!-- Media element -->
-                    <xsd:element name="Medias">
-                        <xsd:complexType>
-                            <xsd:sequence>
-                                <xsd:element name="YoutubeVideo" minOccurs="0" type="TYouTubeUrl"/>
-                                <xsd:element name="Icon" type="TUrl"/>
-                                <xsd:element name="Promotional" type="TUrl" minOccurs="0"/>
-                                <xsd:element name="Screenshot" type="TUrl" minOccurs="2" maxOccurs="unbounded"/>
-                            </xsd:sequence>
-                        </xsd:complexType>
-                    </xsd:element>
-                </xsd:sequence>
+                    <xsd:element name="Medias" type="TAppMedias"/>
+                </xsd:all>
             </xsd:restriction>
         </xsd:complexContent>
     </xsd:complexType>
