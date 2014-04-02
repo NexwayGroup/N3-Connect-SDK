@@ -92,7 +92,7 @@ class ImportCommand extends Command
     protected function checkCapabilities()
     {
         if (!class_exists('\OAuth')) {
-            throw new Exception('This command needs the OAuth PECL Package to be installed http://pecl.php.net/package/oauth');
+            throw new \Exception('This command needs the OAuth PECL Package to be installed http://pecl.php.net/package/oauth');
         }
     }
 
