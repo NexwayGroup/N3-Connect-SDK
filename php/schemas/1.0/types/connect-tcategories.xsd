@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified">
     <!--
-Date: 05/07/2013 $
+Date: 17/04/2014 $
 NEXWAY.COM CONFIDENTIAL. This document and the information contained in it are
 confidential and proprietary information of nexway and may not be reproduced,
 distributed or used, in whole or in part, for any purpose other than as necessary
@@ -9,654 +9,659 @@ to list products for sale on Nexway's network or partners network.
 -->
     <xsd:simpleType name="TCategories">
         <xsd:restriction base="xsd:int">
-            <xsd:enumeration value="4">
-                <xsd:annotation>
-                    <xsd:documentation xml:lang="en-US">Games</xsd:documentation>
-                </xsd:annotation>
-            </xsd:enumeration>
-            <xsd:enumeration value="5">
-                <xsd:annotation>
-                    <xsd:documentation xml:lang="en-US">Games/Action</xsd:documentation>
-                </xsd:annotation>
-            </xsd:enumeration>
-            <xsd:enumeration value="8">
-                <xsd:annotation>
-                    <xsd:documentation xml:lang="en-US">Games/Adventure</xsd:documentation>
-                </xsd:annotation>
-            </xsd:enumeration>
-            <xsd:enumeration value="9">
-                <xsd:annotation>
-                    <xsd:documentation xml:lang="en-US">Games/Arcade</xsd:documentation>
-                </xsd:annotation>
-            </xsd:enumeration>
-            <xsd:enumeration value="10">
-                <xsd:annotation>
-                    <xsd:documentation xml:lang="en-US">Games/Board</xsd:documentation>
-                </xsd:annotation>
-            </xsd:enumeration>
-            <xsd:enumeration value="11">
-                <xsd:annotation>
-                    <xsd:documentation xml:lang="en-US">Games/Chess</xsd:documentation>
-                </xsd:annotation>
-            </xsd:enumeration>
-            <xsd:enumeration value="12">
-                <xsd:annotation>
-                    <xsd:documentation xml:lang="en-US">Games/Casino</xsd:documentation>
-                </xsd:annotation>
-            </xsd:enumeration>
-            <xsd:enumeration value="13">
-                <xsd:annotation>
-                    <xsd:documentation xml:lang="en-US">Games/Casual</xsd:documentation>
-                </xsd:annotation>
-            </xsd:enumeration>
-            <xsd:enumeration value="14">
-                <xsd:annotation>
-                    <xsd:documentation xml:lang="en-US">Games/Education</xsd:documentation>
-                </xsd:annotation>
-            </xsd:enumeration>
-            <xsd:enumeration value="15">
-                <xsd:annotation>
-                    <xsd:documentation xml:lang="en-US">Games/Kids</xsd:documentation>
-                </xsd:annotation>
-            </xsd:enumeration>
-            <xsd:enumeration value="16">
-                <xsd:annotation>
-                    <xsd:documentation xml:lang="en-US">Games/Multiplayer</xsd:documentation>
-                </xsd:annotation>
-            </xsd:enumeration>
-            <xsd:enumeration value="17">
-                <xsd:annotation>
-                    <xsd:documentation xml:lang="en-US">Games/Music</xsd:documentation>
-                </xsd:annotation>
-            </xsd:enumeration>
-            <xsd:enumeration value="18">
-                <xsd:annotation>
-                    <xsd:documentation xml:lang="en-US">Games/Puzzle &amp; Trivia</xsd:documentation>
-                </xsd:annotation>
-            </xsd:enumeration>
-            <xsd:enumeration value="19">
-                <xsd:annotation>
-                    <xsd:documentation xml:lang="en-US">Games/Racing</xsd:documentation>
-                </xsd:annotation>
-            </xsd:enumeration>
-            <xsd:enumeration value="20">
-                <xsd:annotation>
-                    <xsd:documentation xml:lang="en-US">Games/Role Playing</xsd:documentation>
-                </xsd:annotation>
-            </xsd:enumeration>
-            <xsd:enumeration value="21">
-                <xsd:annotation>
-                    <xsd:documentation xml:lang="en-US">Games/Sports</xsd:documentation>
-                </xsd:annotation>
-            </xsd:enumeration>
-            <xsd:enumeration value="22">
-                <xsd:annotation>
-                    <xsd:documentation xml:lang="en-US">Games/Strategy</xsd:documentation>
-                </xsd:annotation>
-            </xsd:enumeration>
-            <xsd:enumeration value="24">
-                <xsd:annotation>
-                    <xsd:documentation xml:lang="en-US">Finance</xsd:documentation>
-                </xsd:annotation>
-            </xsd:enumeration>
-            <xsd:enumeration value="25">
-                <xsd:annotation>
-                    <xsd:documentation xml:lang="en-US">Finance/Accounting</xsd:documentation>
-                </xsd:annotation>
-            </xsd:enumeration>
-            <xsd:enumeration value="26">
-                <xsd:annotation>
-                    <xsd:documentation xml:lang="en-US">Finance/Investments</xsd:documentation>
-                </xsd:annotation>
-            </xsd:enumeration>
-            <xsd:enumeration value="27">
-                <xsd:annotation>
-                    <xsd:documentation xml:lang="en-US">Finance/Money &amp; Currency</xsd:documentation>
-                </xsd:annotation>
-            </xsd:enumeration>
-            <xsd:enumeration value="28">
-                <xsd:annotation>
-                    <xsd:documentation xml:lang="en-US">Finance/Personal Finance</xsd:documentation>
-                </xsd:annotation>
-            </xsd:enumeration>
-            <xsd:enumeration value="29">
-                <xsd:annotation>
-                    <xsd:documentation xml:lang="en-US">Health and Fitness</xsd:documentation>
-                </xsd:annotation>
-            </xsd:enumeration>
-            <xsd:enumeration value="30">
-                <xsd:annotation>
-                    <xsd:documentation xml:lang="en-US">Health and Fitness/Diet and Weightloss</xsd:documentation>
-                </xsd:annotation>
-            </xsd:enumeration>
-            <xsd:enumeration value="31">
-                <xsd:annotation>
-                    <xsd:documentation xml:lang="en-US">Health and Fitness/Exercise &amp; Fitness</xsd:documentation>
-                </xsd:annotation>
-            </xsd:enumeration>
-            <xsd:enumeration value="32">
-                <xsd:annotation>
-                    <xsd:documentation xml:lang="en-US">Health and Fitness/Medical</xsd:documentation>
-                </xsd:annotation>
-            </xsd:enumeration>
-            <xsd:enumeration value="33">
-                <xsd:annotation>
-                    <xsd:documentation xml:lang="en-US">Health and Fitness/Meditation</xsd:documentation>
-                </xsd:annotation>
-            </xsd:enumeration>
-            <xsd:enumeration value="34">
-                <xsd:annotation>
-                    <xsd:documentation xml:lang="en-US">Health and Fitness/Pregnancy</xsd:documentation>
-                </xsd:annotation>
-            </xsd:enumeration>
-            <xsd:enumeration value="35">
-                <xsd:annotation>
-                    <xsd:documentation xml:lang="en-US">Health and Fitness/Sleep Trackers</xsd:documentation>
-                </xsd:annotation>
-            </xsd:enumeration>
-            <xsd:enumeration value="36">
-                <xsd:annotation>
-                    <xsd:documentation xml:lang="en-US">Kids</xsd:documentation>
-                </xsd:annotation>
-            </xsd:enumeration>
-            <xsd:enumeration value="37">
-                <xsd:annotation>
-                    <xsd:documentation xml:lang="en-US">Kids/Alphabet</xsd:documentation>
-                </xsd:annotation>
-            </xsd:enumeration>
-            <xsd:enumeration value="38">
-                <xsd:annotation>
-                    <xsd:documentation xml:lang="en-US">Kids/Animal</xsd:documentation>
-                </xsd:annotation>
-            </xsd:enumeration>
-            <xsd:enumeration value="39">
-                <xsd:annotation>
-                    <xsd:documentation xml:lang="en-US">Kids/History</xsd:documentation>
-                </xsd:annotation>
-            </xsd:enumeration>
-            <xsd:enumeration value="40">
-                <xsd:annotation>
-                    <xsd:documentation xml:lang="en-US">Kids/Language</xsd:documentation>
-                </xsd:annotation>
-            </xsd:enumeration>
-            <xsd:enumeration value="41">
-                <xsd:annotation>
-                    <xsd:documentation xml:lang="en-US">Kids/Math</xsd:documentation>
-                </xsd:annotation>
-            </xsd:enumeration>
-            <xsd:enumeration value="42">
-                <xsd:annotation>
-                    <xsd:documentation xml:lang="en-US">Kids/Popular Charactors</xsd:documentation>
-                </xsd:annotation>
-            </xsd:enumeration>
-            <xsd:enumeration value="43">
-                <xsd:annotation>
-                    <xsd:documentation xml:lang="en-US">Kids/Reading</xsd:documentation>
-                </xsd:annotation>
-            </xsd:enumeration>
-            <xsd:enumeration value="44">
-                <xsd:annotation>
-                    <xsd:documentation xml:lang="en-US">Kids/Science</xsd:documentation>
-                </xsd:annotation>
-            </xsd:enumeration>
-            <xsd:enumeration value="45">
-                <xsd:annotation>
-                    <xsd:documentation xml:lang="en-US">Kids/Writing</xsd:documentation>
-                </xsd:annotation>
-            </xsd:enumeration>
-            <xsd:enumeration value="46">
-                <xsd:annotation>
-                    <xsd:documentation xml:lang="en-US">Lifestyle</xsd:documentation>
-                </xsd:annotation>
-            </xsd:enumeration>
-            <xsd:enumeration value="47">
-                <xsd:annotation>
-                    <xsd:documentation xml:lang="en-US">Lifestyle/Advice</xsd:documentation>
-                </xsd:annotation>
-            </xsd:enumeration>
-            <xsd:enumeration value="48">
-                <xsd:annotation>
-                    <xsd:documentation xml:lang="en-US">Lifestyle/Astrology</xsd:documentation>
-                </xsd:annotation>
-            </xsd:enumeration>
-            <xsd:enumeration value="49">
-                <xsd:annotation>
-                    <xsd:documentation xml:lang="en-US">Lifestyle/Celebrity</xsd:documentation>
-                </xsd:annotation>
-            </xsd:enumeration>
-            <xsd:enumeration value="50">
-                <xsd:annotation>
-                    <xsd:documentation xml:lang="en-US">Lifestyle/Hair &amp; Beauty</xsd:documentation>
-                </xsd:annotation>
-            </xsd:enumeration>
-            <xsd:enumeration value="51">
-                <xsd:annotation>
-                    <xsd:documentation xml:lang="en-US">Lifestyle/Home &amp; Garden</xsd:documentation>
-                </xsd:annotation>
-            </xsd:enumeration>
-            <xsd:enumeration value="52">
-                <xsd:annotation>
-                    <xsd:documentation xml:lang="en-US">Lifestyle/Parenting</xsd:documentation>
-                </xsd:annotation>
-            </xsd:enumeration>
-            <xsd:enumeration value="53">
-                <xsd:annotation>
-                    <xsd:documentation xml:lang="en-US">Lifestyle/Quizzes &amp; Games</xsd:documentation>
-                </xsd:annotation>
-            </xsd:enumeration>
-            <xsd:enumeration value="54">
-                <xsd:annotation>
-                    <xsd:documentation xml:lang="en-US">Lifestyle/Relationships</xsd:documentation>
-                </xsd:annotation>
-            </xsd:enumeration>
-            <xsd:enumeration value="55">
-                <xsd:annotation>
-                    <xsd:documentation xml:lang="en-US">Lifestyle/Self Improvements</xsd:documentation>
-                </xsd:annotation>
-            </xsd:enumeration>
-            <xsd:enumeration value="56">
+            <xsd:enumeration value="3">
                 <xsd:annotation>
                     <xsd:documentation xml:lang="en-US">Books &amp; Comics</xsd:documentation>
                 </xsd:annotation>
             </xsd:enumeration>
-            <xsd:enumeration value="57">
+            <xsd:enumeration value="4">
                 <xsd:annotation>
                     <xsd:documentation xml:lang="en-US">Books &amp; Comics/Books &amp; Readers</xsd:documentation>
                 </xsd:annotation>
             </xsd:enumeration>
-            <xsd:enumeration value="58">
+            <xsd:enumeration value="5">
                 <xsd:annotation>
                     <xsd:documentation xml:lang="en-US">Books &amp; Comics/Childrens Books</xsd:documentation>
                 </xsd:annotation>
             </xsd:enumeration>
-            <xsd:enumeration value="59">
+            <xsd:enumeration value="6">
                 <xsd:annotation>
                     <xsd:documentation xml:lang="en-US">Books &amp; Comics/Comic Strips</xsd:documentation>
                 </xsd:annotation>
             </xsd:enumeration>
-            <xsd:enumeration value="60">
+            <xsd:enumeration value="7">
                 <xsd:annotation>
                     <xsd:documentation xml:lang="en-US">Books &amp; Comics/Graphic Novels</xsd:documentation>
                 </xsd:annotation>
             </xsd:enumeration>
-            <xsd:enumeration value="61">
+            <xsd:enumeration value="8">
                 <xsd:annotation>
                     <xsd:documentation xml:lang="en-US">Books &amp; Comics/Manga</xsd:documentation>
                 </xsd:annotation>
             </xsd:enumeration>
-            <xsd:enumeration value="62">
+            <xsd:enumeration value="9">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="en-US">Books &amp; Comics/Other Books &amp; Comics</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="10">
                 <xsd:annotation>
                     <xsd:documentation xml:lang="en-US">City Info</xsd:documentation>
                 </xsd:annotation>
             </xsd:enumeration>
-            <xsd:enumeration value="63">
+            <xsd:enumeration value="11">
                 <xsd:annotation>
-                    <xsd:documentation xml:lang="en-US">City Info/Transport</xsd:documentation>
+                    <xsd:documentation xml:lang="en-US">City Info/City</xsd:documentation>
                 </xsd:annotation>
             </xsd:enumeration>
-            <xsd:enumeration value="64">
-                <xsd:annotation>
-                    <xsd:documentation xml:lang="en-US">City Info/Entertainment Guide</xsd:documentation>
-                </xsd:annotation>
-            </xsd:enumeration>
-            <xsd:enumeration value="65">
-                <xsd:annotation>
-                    <xsd:documentation xml:lang="en-US">City Info/Restaurant Guide</xsd:documentation>
-                </xsd:annotation>
-            </xsd:enumeration>
-            <xsd:enumeration value="66">
+            <xsd:enumeration value="12">
                 <xsd:annotation>
                     <xsd:documentation xml:lang="en-US">Communication</xsd:documentation>
                 </xsd:annotation>
             </xsd:enumeration>
-            <xsd:enumeration value="67">
+            <xsd:enumeration value="13">
                 <xsd:annotation>
                     <xsd:documentation xml:lang="en-US">Cooking</xsd:documentation>
                 </xsd:annotation>
             </xsd:enumeration>
-            <xsd:enumeration value="68">
+            <xsd:enumeration value="14">
                 <xsd:annotation>
-                    <xsd:documentation xml:lang="en-US">Cooking/Recipes </xsd:documentation>
+                    <xsd:documentation xml:lang="en-US">Cooking/Recipes</xsd:documentation>
                 </xsd:annotation>
             </xsd:enumeration>
-            <xsd:enumeration value="69">
+            <xsd:enumeration value="15">
                 <xsd:annotation>
                     <xsd:documentation xml:lang="en-US">Education</xsd:documentation>
                 </xsd:annotation>
             </xsd:enumeration>
-            <xsd:enumeration value="70">
+            <xsd:enumeration value="16">
                 <xsd:annotation>
                     <xsd:documentation xml:lang="en-US">Education/History</xsd:documentation>
                 </xsd:annotation>
             </xsd:enumeration>
-            <xsd:enumeration value="71">
+            <xsd:enumeration value="17">
                 <xsd:annotation>
-                    <xsd:documentation xml:lang="en-US">Education/Language</xsd:documentation>
+                    <xsd:documentation xml:lang="en-US">Education/Language (Spoken)</xsd:documentation>
                 </xsd:annotation>
             </xsd:enumeration>
-            <xsd:enumeration value="72">
+            <xsd:enumeration value="18">
                 <xsd:annotation>
-                    <xsd:documentation xml:lang="en-US">Education/Language/English</xsd:documentation>
+                    <xsd:documentation xml:lang="en-US">Education/Language (Spoken)/English</xsd:documentation>
                 </xsd:annotation>
             </xsd:enumeration>
-            <xsd:enumeration value="73">
+            <xsd:enumeration value="19">
                 <xsd:annotation>
-                    <xsd:documentation xml:lang="en-US">Education/Language/French</xsd:documentation>
+                    <xsd:documentation xml:lang="en-US">Education/Language (Spoken)/French</xsd:documentation>
                 </xsd:annotation>
             </xsd:enumeration>
-            <xsd:enumeration value="74">
+            <xsd:enumeration value="20">
                 <xsd:annotation>
-                    <xsd:documentation xml:lang="en-US">Education/Language/German</xsd:documentation>
+                    <xsd:documentation xml:lang="en-US">Education/Language (Spoken)/German</xsd:documentation>
                 </xsd:annotation>
             </xsd:enumeration>
-            <xsd:enumeration value="75">
+            <xsd:enumeration value="21">
                 <xsd:annotation>
-                    <xsd:documentation xml:lang="en-US">Education/Language/Spanish</xsd:documentation>
+                    <xsd:documentation xml:lang="en-US">Education/Language (Spoken)/Italien</xsd:documentation>
                 </xsd:annotation>
             </xsd:enumeration>
-            <xsd:enumeration value="76">
+            <xsd:enumeration value="22">
                 <xsd:annotation>
-                    <xsd:documentation xml:lang="en-US">Education/Language/Italien</xsd:documentation>
+                    <xsd:documentation xml:lang="en-US">Education/Language (Spoken)/Portuguese</xsd:documentation>
                 </xsd:annotation>
             </xsd:enumeration>
-            <xsd:enumeration value="77">
+            <xsd:enumeration value="23">
                 <xsd:annotation>
-                    <xsd:documentation xml:lang="en-US">Education/Language/Dutch</xsd:documentation>
+                    <xsd:documentation xml:lang="en-US">Education/Language (Spoken)/Dutch</xsd:documentation>
                 </xsd:annotation>
             </xsd:enumeration>
-            <xsd:enumeration value="78">
+            <xsd:enumeration value="24">
                 <xsd:annotation>
-                    <xsd:documentation xml:lang="en-US">Education/Language/Chinease</xsd:documentation>
+                    <xsd:documentation xml:lang="en-US">Education/Language (Spoken)/Chinease</xsd:documentation>
                 </xsd:annotation>
             </xsd:enumeration>
-            <xsd:enumeration value="79">
+            <xsd:enumeration value="25">
                 <xsd:annotation>
-                    <xsd:documentation xml:lang="en-US">Education/Language/Japanease</xsd:documentation>
+                    <xsd:documentation xml:lang="en-US">Education/Language (Spoken)/Japanese</xsd:documentation>
                 </xsd:annotation>
             </xsd:enumeration>
-            <xsd:enumeration value="80">
+            <xsd:enumeration value="26">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="en-US">Education/Language (Spoken)/Other Language (Spoken)</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="27">
                 <xsd:annotation>
                     <xsd:documentation xml:lang="en-US">Education/Math</xsd:documentation>
                 </xsd:annotation>
             </xsd:enumeration>
-            <xsd:enumeration value="81">
+            <xsd:enumeration value="28">
                 <xsd:annotation>
                     <xsd:documentation xml:lang="en-US">Education/Reading</xsd:documentation>
                 </xsd:annotation>
             </xsd:enumeration>
-            <xsd:enumeration value="82">
+            <xsd:enumeration value="29">
                 <xsd:annotation>
                     <xsd:documentation xml:lang="en-US">Education/Science</xsd:documentation>
                 </xsd:annotation>
             </xsd:enumeration>
-            <xsd:enumeration value="83">
+            <xsd:enumeration value="30">
                 <xsd:annotation>
                     <xsd:documentation xml:lang="en-US">Education/Science/Biology</xsd:documentation>
                 </xsd:annotation>
             </xsd:enumeration>
-            <xsd:enumeration value="84">
+            <xsd:enumeration value="31">
                 <xsd:annotation>
                     <xsd:documentation xml:lang="en-US">Education/Science/Chemistry</xsd:documentation>
                 </xsd:annotation>
             </xsd:enumeration>
-            <xsd:enumeration value="85">
+            <xsd:enumeration value="32">
                 <xsd:annotation>
                     <xsd:documentation xml:lang="en-US">Education/Science/Physics</xsd:documentation>
                 </xsd:annotation>
             </xsd:enumeration>
-            <xsd:enumeration value="86">
+            <xsd:enumeration value="33">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="en-US">Education/Science/Other Science</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="34">
                 <xsd:annotation>
                     <xsd:documentation xml:lang="en-US">Education/Test Guides</xsd:documentation>
                 </xsd:annotation>
             </xsd:enumeration>
-            <xsd:enumeration value="87">
+            <xsd:enumeration value="35">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="en-US">Education/Writing</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="36">
                 <xsd:annotation>
                     <xsd:documentation xml:lang="en-US">Entertainment</xsd:documentation>
                 </xsd:annotation>
             </xsd:enumeration>
-            <xsd:enumeration value="88">
+            <xsd:enumeration value="37">
                 <xsd:annotation>
-                    <xsd:documentation xml:lang="en-US">Books &amp; Comics/Magazine</xsd:documentation>
+                    <xsd:documentation xml:lang="en-US">Entertainment/Entertainment Guide</xsd:documentation>
                 </xsd:annotation>
             </xsd:enumeration>
-            <xsd:enumeration value="89">
+            <xsd:enumeration value="38">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="en-US">Finance</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="39">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="en-US">Finance/Accounting</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="40">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="en-US">Finance/Banking</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="41">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="en-US">Finance/Investments</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="42">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="en-US">Finance/Money &amp; Currency</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="43">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="en-US">Finance/Personal Finance</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="44">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="en-US">Games</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="45">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="en-US">Games/Action</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="46">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="en-US">Games/Adventure</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="47">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="en-US">Games/Arcade</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="48">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="en-US">Games/Board</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="49">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="en-US">Games/Casino</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="50">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="en-US">Games/Education</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="51">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="en-US">Games/Kids</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="52">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="en-US">Games/Multiplayer</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="53">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="en-US">Games/Music</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="54">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="en-US">Games/Puzzle &amp; Trivia</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="55">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="en-US">Games/Racing</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="56">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="en-US">Games/Role Playing</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="57">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="en-US">Games/Sport</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="58">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="en-US">Games/Strategy</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="59">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="en-US">Games/Other Games</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="60">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="en-US">Health and Fitness</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="61">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="en-US">Health and Fitness/Diet and Weightloss</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="62">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="en-US">Health and Fitness/Exercise &amp; Fitness</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="63">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="en-US">Health and Fitness/Medical</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="64">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="en-US">Health and Fitness/Meditation</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="65">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="en-US">Health and Fitness/Pregnancy</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="66">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="en-US">Health and Fitness/Sleep Trackers</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="68">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="en-US">Education/Alphabet</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="69">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="en-US">Education/Animal</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="73">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="en-US">Education/Popular Characters</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="77">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="en-US">Lifestyle</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="78">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="en-US">Lifestyle/Advice</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="79">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="en-US">Lifestyle/Astrology</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="80">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="en-US">Lifestyle/Hair &amp; Beauty</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="81">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="en-US">Lifestyle/Home &amp; Garden</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="82">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="en-US">Lifestyle/Parenting</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="83">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="en-US">Lifestyle/Quizzes &amp; Games</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="84">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="en-US">Lifestyle/Relationships</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="85">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="en-US">Lifestyle/Self Improvements</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="86">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="en-US">Magazine</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="87">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="en-US">Music</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="88">
                 <xsd:annotation>
                     <xsd:documentation xml:lang="en-US">Navigation</xsd:documentation>
                 </xsd:annotation>
             </xsd:enumeration>
-            <xsd:enumeration value="90">
+            <xsd:enumeration value="89">
                 <xsd:annotation>
                     <xsd:documentation xml:lang="en-US">News &amp; Weather</xsd:documentation>
                 </xsd:annotation>
             </xsd:enumeration>
-            <xsd:enumeration value="91">
+            <xsd:enumeration value="90">
                 <xsd:annotation>
                     <xsd:documentation xml:lang="en-US">News &amp; Weather/Business</xsd:documentation>
                 </xsd:annotation>
             </xsd:enumeration>
-            <xsd:enumeration value="92">
+            <xsd:enumeration value="91">
                 <xsd:annotation>
                     <xsd:documentation xml:lang="en-US">News &amp; Weather/Entertainment</xsd:documentation>
                 </xsd:annotation>
             </xsd:enumeration>
-            <xsd:enumeration value="93">
+            <xsd:enumeration value="92">
                 <xsd:annotation>
                     <xsd:documentation xml:lang="en-US">News &amp; Weather/Health</xsd:documentation>
                 </xsd:annotation>
             </xsd:enumeration>
-            <xsd:enumeration value="94">
+            <xsd:enumeration value="93">
                 <xsd:annotation>
                     <xsd:documentation xml:lang="en-US">News &amp; Weather/Politics</xsd:documentation>
                 </xsd:annotation>
             </xsd:enumeration>
-            <xsd:enumeration value="95">
+            <xsd:enumeration value="94">
                 <xsd:annotation>
                     <xsd:documentation xml:lang="en-US">News &amp; Weather/Science</xsd:documentation>
                 </xsd:annotation>
             </xsd:enumeration>
-            <xsd:enumeration value="96">
+            <xsd:enumeration value="95">
                 <xsd:annotation>
                     <xsd:documentation xml:lang="en-US">News &amp; Weather/Technology</xsd:documentation>
                 </xsd:annotation>
             </xsd:enumeration>
-            <xsd:enumeration value="97">
+            <xsd:enumeration value="96">
                 <xsd:annotation>
                     <xsd:documentation xml:lang="en-US">News &amp; Weather/US</xsd:documentation>
                 </xsd:annotation>
             </xsd:enumeration>
-            <xsd:enumeration value="98">
+            <xsd:enumeration value="97">
                 <xsd:annotation>
                     <xsd:documentation xml:lang="en-US">News &amp; Weather/Weather</xsd:documentation>
                 </xsd:annotation>
             </xsd:enumeration>
+            <xsd:enumeration value="98">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="en-US">News &amp; Weather/World</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
             <xsd:enumeration value="99">
                 <xsd:annotation>
-                    <xsd:documentation xml:lang="en-US">Novelty</xsd:documentation>
+                    <xsd:documentation xml:lang="en-US">News &amp; Weather/Newspaper &amp; Journal</xsd:documentation>
                 </xsd:annotation>
             </xsd:enumeration>
             <xsd:enumeration value="100">
                 <xsd:annotation>
-                    <xsd:documentation xml:lang="en-US">Photography</xsd:documentation>
+                    <xsd:documentation xml:lang="en-US">Novelty</xsd:documentation>
                 </xsd:annotation>
             </xsd:enumeration>
             <xsd:enumeration value="101">
                 <xsd:annotation>
-                    <xsd:documentation xml:lang="en-US">Podcasts</xsd:documentation>
+                    <xsd:documentation xml:lang="en-US">Photography</xsd:documentation>
                 </xsd:annotation>
             </xsd:enumeration>
             <xsd:enumeration value="102">
                 <xsd:annotation>
-                    <xsd:documentation xml:lang="en-US">Productivity</xsd:documentation>
+                    <xsd:documentation xml:lang="en-US">Podcasts</xsd:documentation>
                 </xsd:annotation>
             </xsd:enumeration>
             <xsd:enumeration value="103">
                 <xsd:annotation>
-                    <xsd:documentation xml:lang="en-US">Real Estate</xsd:documentation>
+                    <xsd:documentation xml:lang="en-US">Productivity</xsd:documentation>
                 </xsd:annotation>
             </xsd:enumeration>
             <xsd:enumeration value="104">
                 <xsd:annotation>
-                    <xsd:documentation xml:lang="en-US">Reference</xsd:documentation>
+                    <xsd:documentation xml:lang="en-US">Real Estate</xsd:documentation>
                 </xsd:annotation>
             </xsd:enumeration>
             <xsd:enumeration value="105">
                 <xsd:annotation>
-                    <xsd:documentation xml:lang="en-US">Ringtone</xsd:documentation>
+                    <xsd:documentation xml:lang="en-US">Reference</xsd:documentation>
                 </xsd:annotation>
             </xsd:enumeration>
             <xsd:enumeration value="106">
                 <xsd:annotation>
-                    <xsd:documentation xml:lang="en-US">Ringtone/Christian</xsd:documentation>
+                    <xsd:documentation xml:lang="en-US">Ringtones</xsd:documentation>
                 </xsd:annotation>
             </xsd:enumeration>
             <xsd:enumeration value="107">
                 <xsd:annotation>
-                    <xsd:documentation xml:lang="en-US">Ringtone/Classical</xsd:documentation>
+                    <xsd:documentation xml:lang="en-US">Shopping</xsd:documentation>
                 </xsd:annotation>
             </xsd:enumeration>
             <xsd:enumeration value="108">
                 <xsd:annotation>
-                    <xsd:documentation xml:lang="en-US">Ringtone/Collegiate</xsd:documentation>
-                </xsd:annotation>
-            </xsd:enumeration>
-            <xsd:enumeration value="109">
-                <xsd:annotation>
-                    <xsd:documentation xml:lang="en-US">Ringtone/Comedy</xsd:documentation>
+                    <xsd:documentation xml:lang="en-US">Social Networks</xsd:documentation>
                 </xsd:annotation>
             </xsd:enumeration>
             <xsd:enumeration value="110">
                 <xsd:annotation>
-                    <xsd:documentation xml:lang="en-US">Ringtone/Country</xsd:documentation>
+                    <xsd:documentation xml:lang="en-US">Sports</xsd:documentation>
                 </xsd:annotation>
             </xsd:enumeration>
             <xsd:enumeration value="111">
                 <xsd:annotation>
-                    <xsd:documentation xml:lang="en-US">Ringtone/Dance &amp; Electric</xsd:documentation>
+                    <xsd:documentation xml:lang="en-US">Sports/Baseball</xsd:documentation>
                 </xsd:annotation>
             </xsd:enumeration>
             <xsd:enumeration value="112">
                 <xsd:annotation>
-                    <xsd:documentation xml:lang="en-US">Ringtone/Jazz &amp; Standard</xsd:documentation>
+                    <xsd:documentation xml:lang="en-US">Sports/Basketball</xsd:documentation>
                 </xsd:annotation>
             </xsd:enumeration>
             <xsd:enumeration value="113">
                 <xsd:annotation>
-                    <xsd:documentation xml:lang="en-US">Ringtone/Latin</xsd:documentation>
+                    <xsd:documentation xml:lang="en-US">Sports/Boxing</xsd:documentation>
                 </xsd:annotation>
             </xsd:enumeration>
             <xsd:enumeration value="114">
                 <xsd:annotation>
-                    <xsd:documentation xml:lang="en-US">Ringtone/Metal</xsd:documentation>
+                    <xsd:documentation xml:lang="en-US">Sports/Football</xsd:documentation>
                 </xsd:annotation>
             </xsd:enumeration>
             <xsd:enumeration value="115">
                 <xsd:annotation>
-                    <xsd:documentation xml:lang="en-US">Ringtone/Movie</xsd:documentation>
+                    <xsd:documentation xml:lang="en-US">Sports/Golf</xsd:documentation>
                 </xsd:annotation>
             </xsd:enumeration>
             <xsd:enumeration value="116">
                 <xsd:annotation>
-                    <xsd:documentation xml:lang="en-US">Ringtone/Rap</xsd:documentation>
+                    <xsd:documentation xml:lang="en-US">Sports/Hockey</xsd:documentation>
                 </xsd:annotation>
             </xsd:enumeration>
             <xsd:enumeration value="117">
                 <xsd:annotation>
-                    <xsd:documentation xml:lang="en-US">Ringtone/Rock</xsd:documentation>
+                    <xsd:documentation xml:lang="en-US">Sports/Ice Hockey</xsd:documentation>
                 </xsd:annotation>
             </xsd:enumeration>
             <xsd:enumeration value="118">
                 <xsd:annotation>
-                    <xsd:documentation xml:lang="en-US">Ringtone/Sound Effects</xsd:documentation>
+                    <xsd:documentation xml:lang="en-US">Sports/NCAA</xsd:documentation>
                 </xsd:annotation>
             </xsd:enumeration>
             <xsd:enumeration value="119">
                 <xsd:annotation>
-                    <xsd:documentation xml:lang="en-US">Ringtone/Television</xsd:documentation>
+                    <xsd:documentation xml:lang="en-US">Sports/Soccer</xsd:documentation>
                 </xsd:annotation>
             </xsd:enumeration>
             <xsd:enumeration value="120">
                 <xsd:annotation>
-                    <xsd:documentation xml:lang="en-US">Ringtone/Voice</xsd:documentation>
+                    <xsd:documentation xml:lang="en-US">Sports/Tennis</xsd:documentation>
                 </xsd:annotation>
             </xsd:enumeration>
             <xsd:enumeration value="121">
                 <xsd:annotation>
-                    <xsd:documentation xml:lang="en-US">Ringtone/Ringtone Maker</xsd:documentation>
+                    <xsd:documentation xml:lang="en-US">Sports/UFC</xsd:documentation>
                 </xsd:annotation>
             </xsd:enumeration>
             <xsd:enumeration value="122">
                 <xsd:annotation>
-                    <xsd:documentation xml:lang="en-US">Shopping</xsd:documentation>
+                    <xsd:documentation xml:lang="en-US">Sports/Other Sport</xsd:documentation>
                 </xsd:annotation>
             </xsd:enumeration>
             <xsd:enumeration value="123">
                 <xsd:annotation>
-                    <xsd:documentation xml:lang="en-US">Social Networks</xsd:documentation>
+                    <xsd:documentation xml:lang="en-US">Themes</xsd:documentation>
                 </xsd:annotation>
             </xsd:enumeration>
             <xsd:enumeration value="124">
                 <xsd:annotation>
-                    <xsd:documentation xml:lang="en-US">Sports</xsd:documentation>
+                    <xsd:documentation xml:lang="en-US">Travel</xsd:documentation>
                 </xsd:annotation>
             </xsd:enumeration>
             <xsd:enumeration value="125">
                 <xsd:annotation>
-                    <xsd:documentation xml:lang="en-US">Sports/Baseball</xsd:documentation>
+                    <xsd:documentation xml:lang="en-US">Travel/Auto Rental</xsd:documentation>
                 </xsd:annotation>
             </xsd:enumeration>
             <xsd:enumeration value="126">
                 <xsd:annotation>
-                    <xsd:documentation xml:lang="en-US">Sports/Basketball</xsd:documentation>
+                    <xsd:documentation xml:lang="en-US">Travel/Flights</xsd:documentation>
                 </xsd:annotation>
             </xsd:enumeration>
             <xsd:enumeration value="127">
                 <xsd:annotation>
-                    <xsd:documentation xml:lang="en-US">Sports/Boxing</xsd:documentation>
+                    <xsd:documentation xml:lang="en-US">Games/Simulators</xsd:documentation>
                 </xsd:annotation>
             </xsd:enumeration>
             <xsd:enumeration value="128">
                 <xsd:annotation>
-                    <xsd:documentation xml:lang="en-US">Sports/Football</xsd:documentation>
+                    <xsd:documentation xml:lang="en-US">Travel/Hotel / Accommodation</xsd:documentation>
                 </xsd:annotation>
             </xsd:enumeration>
             <xsd:enumeration value="129">
                 <xsd:annotation>
-                    <xsd:documentation xml:lang="en-US">Sports/Golf</xsd:documentation>
+                    <xsd:documentation xml:lang="en-US">Travel/Public Transport</xsd:documentation>
                 </xsd:annotation>
             </xsd:enumeration>
             <xsd:enumeration value="130">
                 <xsd:annotation>
-                    <xsd:documentation xml:lang="en-US">Sports/Hockey</xsd:documentation>
+                    <xsd:documentation xml:lang="en-US">Travel/Public Transport/City</xsd:documentation>
                 </xsd:annotation>
             </xsd:enumeration>
             <xsd:enumeration value="131">
                 <xsd:annotation>
-                    <xsd:documentation xml:lang="en-US">Sports/NCAA</xsd:documentation>
+                    <xsd:documentation xml:lang="en-US">Travel/Trip Planner</xsd:documentation>
                 </xsd:annotation>
             </xsd:enumeration>
             <xsd:enumeration value="132">
                 <xsd:annotation>
-                    <xsd:documentation xml:lang="en-US">Sports/Soccer</xsd:documentation>
+                    <xsd:documentation xml:lang="en-US">Utilities</xsd:documentation>
                 </xsd:annotation>
             </xsd:enumeration>
             <xsd:enumeration value="133">
                 <xsd:annotation>
-                    <xsd:documentation xml:lang="en-US">Sports/Tennis</xsd:documentation>
+                    <xsd:documentation xml:lang="en-US">Utilities/Alarms &amp; Clocks</xsd:documentation>
                 </xsd:annotation>
             </xsd:enumeration>
             <xsd:enumeration value="134">
                 <xsd:annotation>
-                    <xsd:documentation xml:lang="en-US">Sports/UFC</xsd:documentation>
+                    <xsd:documentation xml:lang="en-US">Utilities/Battery Savers</xsd:documentation>
                 </xsd:annotation>
             </xsd:enumeration>
             <xsd:enumeration value="135">
                 <xsd:annotation>
-                    <xsd:documentation xml:lang="en-US">Sports/Other Sport</xsd:documentation>
+                    <xsd:documentation xml:lang="en-US">Utilities/Calculators</xsd:documentation>
                 </xsd:annotation>
             </xsd:enumeration>
             <xsd:enumeration value="136">
                 <xsd:annotation>
-                    <xsd:documentation xml:lang="en-US">Education/Writing</xsd:documentation>
+                    <xsd:documentation xml:lang="en-US">Utilities/Calender</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="137">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="en-US">Utilities/Notes</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="138">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="en-US">Web Browser</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="140">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="en-US">Entertainment/Kids Entertainment</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="142">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="en-US">TOP SELLERS</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="143">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="en-US">NEW</xsd:documentation>
                 </xsd:annotation>
             </xsd:enumeration>
             <xsd:enumeration value="144">
@@ -664,9 +669,34 @@ to list products for sale on Nexway's network or partners network.
                     <xsd:documentation xml:lang="en-US">ALL</xsd:documentation>
                 </xsd:annotation>
             </xsd:enumeration>
+            <xsd:enumeration value="145">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="en-US">KURIO PICKS</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="146">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="en-US">Games/Casual</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="147">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="en-US">Sourcing</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
             <xsd:enumeration value="148">
                 <xsd:annotation>
                     <xsd:documentation xml:lang="en-US">Adult</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="149">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="en-US">Education/Language (Spoken)/Spanish</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="150">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="en-US">Free</xsd:documentation>
                 </xsd:annotation>
             </xsd:enumeration>
         </xsd:restriction>
