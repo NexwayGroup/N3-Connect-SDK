@@ -10,6 +10,16 @@ Requirements
 - PHP CLI (version 5.3 minimum)
 - OAuth PECL Extension http://pecl.php.net/package/oauth
 
+Installation
+------------
+
+This project uses Composer for installing dependencies.
+Prior to using the SDK you have to install Composer, here's how to install it: https://getcomposer.org/doc/01-basic-usage.md
+
+Once installed, type the command below in your terminal.
+
+	php composer.phar install
+
 Usage
 -----
 
