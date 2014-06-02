@@ -12,6 +12,7 @@ Requirements
 
 Installation
 ------------
+Once the repository is checked out, go to "php" directory.
 
 This project uses Composer for installing dependencies.
 Prior to using the SDK you have to install Composer, here's how to install it: https://getcomposer.org/doc/01-basic-usage.md
