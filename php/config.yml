@@ -1,6 +1,6 @@
 debug: true
 oauth:
-    endpoint: http://ec2.kurio.nexway.com/connect/import
+    endpoint: http://www.nexwayconnect.com/connect/import
     consumer:
         key: REPLACE_WITH_CONSUMER_KEY
         secret: REPLACE_WITH_CONSUMER_SECRET
