@@ -1,24 +1,25 @@
-<!-- "$Revision: #3 $" -->
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified">
     <!--
-    $Date: 2013/07/03 $
-    NEXWAY.COM CONFIDENTIAL. This document and the information contained in it are
-    confidential and proprietary information of nexway and may not be reproduced,
-    distributed or used, in whole or in part, for any purpose other than as necessary
-    to list products for sale on Nexway's network or partners network.
-    -->
+Date: 23/06/2015 $
+NEXWAY.COM CONFIDENTIAL. This document and the information contained in it are
+confidential and proprietary information of nexway and may not be reproduced,
+distributed or used, in whole or in part, for any purpose other than as necessary
+to list products for sale on Nexway's network or partners network.
+-->
     <xsd:simpleType name="TLanguage">
         <xsd:restriction base="xsd:string">
-            <xsd:enumeration value="en"/>
-            <xsd:enumeration value="fr"/>
-            <xsd:enumeration value="de"/>
-            <xsd:enumeration value="it"/>
-            <xsd:enumeration value="es"/>
-            <xsd:enumeration value="nl"/>
-            <xsd:enumeration value="pt_br"/>
-            <xsd:enumeration value="es_mx"/>
-            <xsd:enumeration value="ru"/>
-            <xsd:enumeration value="jp"/>
+            <xsd:enumeration value="en_US"/>
+            <xsd:enumeration value="da_DK"/>
+            <xsd:enumeration value="nl_NL"/>
+            <xsd:enumeration value="fr_FR"/>
+            <xsd:enumeration value="de_DE"/>
+            <xsd:enumeration value="it_IT"/>
+            <xsd:enumeration value="nn_NO"/>
+            <xsd:enumeration value="pt_BR"/>
+            <xsd:enumeration value="pt_PT"/>
+            <xsd:enumeration value="es_ES"/>
+            <xsd:enumeration value="sv_SE"/>
         </xsd:restriction>
     </xsd:simpleType>
 </xsd:schema>
