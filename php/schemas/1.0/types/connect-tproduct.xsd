@@ -22,30 +22,30 @@ to list products for sale on Nexway's network or partners network.
         </xsd:restriction>
     </xsd:simpleType>
 
+    <xsd:group name="DescriptionGroup">
+        <xsd:sequence>
+            <xsd:element name="Title" type="xsd:string"/>
+            <xsd:element name="Short" type="TShortDescription"/>
+            <xsd:element name="Long"  type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:group>
+
+    <xsd:complexType name="TDefaultDescription">
+        <xsd:group ref="DescriptionGroup"/>
+    </xsd:complexType>
+
+    <xsd:complexType name="TDescription">
+        <xsd:group ref="DescriptionGroup"/>
+        <xsd:attribute name="Language" use="required" type="TLanguage"/>
+    </xsd:complexType>
+
     <!-- TDescriptions -->
     <xsd:complexType name="TDescriptions">
         <xsd:sequence>
             <!-- Description with default language -->
-            <xsd:element name="DefaultDescription">
-                <xsd:complexType>
-                    <xsd:sequence>
-                        <xsd:element name="Title" type="xsd:string"/>
-                        <xsd:element name="Short" type="TShortDescription"/>
-                        <xsd:element name="Long"  type="xsd:string"/>
-                    </xsd:sequence>
-                </xsd:complexType>
-            </xsd:element>
+            <xsd:element name="DefaultDescription" type="TDefaultDescription"/>
             <!-- Description with other languages -->
-            <xsd:element name="Description" minOccurs="0" maxOccurs="unbounded">
-                <xsd:complexType>
-                    <xsd:sequence>
-                        <xsd:element name="Title" type="xsd:string"/>
-                        <xsd:element name="Short" type="TShortDescription"/>
-                        <xsd:element name="Long" type="xsd:string"/>
-                    </xsd:sequence>
-                    <xsd:attribute name="Language" use="required" type="TLanguage"/>
-                </xsd:complexType>
-            </xsd:element>
+            <xsd:element name="Description" type="TDescription" minOccurs="0" maxOccurs="unbounded"/>
         </xsd:sequence>
     </xsd:complexType>
 
