@@ -14,5 +14,4 @@
     <xsd:include schemaLocation="types/connect-tprice.xsd"/>
     <xsd:include schemaLocation="types/connect-tproduct.xsd"/>
     <xsd:include schemaLocation="types/connect-tapps.xsd"/>
-    <xsd:include schemaLocation="types/connect-tapplanguages.xsd"/>
 </xsd:schema>
