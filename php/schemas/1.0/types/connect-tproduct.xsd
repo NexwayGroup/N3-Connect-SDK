@@ -73,6 +73,7 @@ to list products for sale on Nexway's network or partners network.
     <!-- TProduct -->
     <xsd:complexType name="TProduct">
         <xsd:sequence>
+            <xsd:element name="Developer" type="xsd:string"/>
             <xsd:element name="Sku" type="xsd:string"/>
             <xsd:element name="Status" type="TStatus"/>
             <xsd:element name="SellTo" type="TSellTo" minOccurs="0"/>
