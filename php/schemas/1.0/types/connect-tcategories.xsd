@@ -729,6 +729,11 @@ to list products for sale on Nexway's network or partners network.
                     <xsd:documentation xml:lang="en-US">Free</xsd:documentation>
                 </xsd:annotation>
             </xsd:enumeration>
+            <xsd:enumeration value="173">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="en-US">Widgets</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
         </xsd:restriction>
     </xsd:simpleType>
 </xsd:schema>
