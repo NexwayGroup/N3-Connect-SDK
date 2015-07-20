@@ -604,6 +604,11 @@ to list products for sale on Nexway's network or partners network.
                     <xsd:documentation xml:lang="en-US">Travel/Flights</xsd:documentation>
                 </xsd:annotation>
             </xsd:enumeration>
+            <xsd:enumeration value="172">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="en-US">Travel/Guides</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
             <xsd:enumeration value="127">
                 <xsd:annotation>
                     <xsd:documentation xml:lang="en-US">Games/Simulators</xsd:documentation>
