@@ -649,6 +649,16 @@ to list products for sale on Nexway's network or partners network.
                     <xsd:documentation xml:lang="en-US">Utilities/Notes</xsd:documentation>
                 </xsd:annotation>
             </xsd:enumeration>
+            <xsd:enumeration value="169">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="en-US">Utilities/Security</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="168">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="en-US">Utilities/Tools</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
             <xsd:enumeration value="138">
                 <xsd:annotation>
                     <xsd:documentation xml:lang="en-US">Web Browser</xsd:documentation>
