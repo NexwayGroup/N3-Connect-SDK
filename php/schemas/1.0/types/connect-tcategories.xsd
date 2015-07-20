@@ -389,6 +389,11 @@ to list products for sale on Nexway's network or partners network.
                     <xsd:documentation xml:lang="en-US">Lifestyle/Relationships</xsd:documentation>
                 </xsd:annotation>
             </xsd:enumeration>
+            <xsd:enumeration value="170">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="en-US">Lifestyle/Religion</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
             <xsd:enumeration value="85">
                 <xsd:annotation>
                     <xsd:documentation xml:lang="en-US">Lifestyle/Self Improvements</xsd:documentation>
