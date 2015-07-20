@@ -504,6 +504,11 @@ to list products for sale on Nexway's network or partners network.
                     <xsd:documentation xml:lang="en-US">Ringtones</xsd:documentation>
                 </xsd:annotation>
             </xsd:enumeration>
+            <xsd:enumeration value="171">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="en-US">Search</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
             <xsd:enumeration value="107">
                 <xsd:annotation>
                     <xsd:documentation xml:lang="en-US">Shopping</xsd:documentation>
