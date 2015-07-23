@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified">
     <!--
-Date: 17/04/2014 $
+Date: 2015/07/23 $
 NEXWAY.COM CONFIDENTIAL. This document and the information contained in it are
 confidential and proprietary information of nexway and may not be reproduced,
 distributed or used, in whole or in part, for any purpose other than as necessary
 to list products for sale on Nexway's network or partners network.
 -->
-    <xsd:simpleType name="TCategories">
+    <xsd:simpleType name="TCategory">
         <xsd:restriction base="xsd:int">
             <xsd:enumeration value="3">
                 <xsd:annotation>
@@ -735,5 +735,12 @@ to list products for sale on Nexway's network or partners network.
                 </xsd:annotation>
             </xsd:enumeration>
         </xsd:restriction>
+    </xsd:simpleType>
+    <!-- Categories -->
+    <xsd:simpleType name="TCategories">
+        <xsd:list itemType="TCategory"/>
+    </xsd:simpleType>
+    <xsd:simpleType name="TCategoryOrTCategories">
+        <xsd:union memberTypes="TCategory TCategories"/>
     </xsd:simpleType>
 </xsd:schema>
