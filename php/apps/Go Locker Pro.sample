@@ -1,51 +1,60 @@
-<?xml version="1.0" encoding="utf-8"?>
 <NexwayConnect xsi:noNamespaceSchemaLocation="nexway-connect-envelope.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <Header>
         <DocumentVersion>1.00</DocumentVersion>
     </Header>
     <MessageType>Apps</MessageType>
     <Message OperationType="INSERT">
-        <Apps Type="AndroidApp">
-            <AndroidApp>
-                <Sku>com.jiubang.goscreenlock.pro</Sku>
-                <SellTo>
-                    <Country Code="FR" />
-                    <Country Code="GB" />
-                    <Country Code="DE" />
-                </SellTo>
-                <Category>ab</Category>
+        <Apps>
+            <FreeAndroidApp>
+                <Sku>org.microemu.android.JabpLite.JabpLite</Sku>
+                <Developer>FreEPOC</Developer>
+                <Category>38 108</Category>
                 <Descriptions>
                     <DefaultDescription>
-                        <Title><![CDATA[GO Locker Pro]]></Title>
-                        <Short><![CDATA[GO Locker Pro is a standalone, premium version of GO Locker!.]]></Short>
-                        <Long><![CDATA[The top rated UI locker in Kurio Store. Premium themes (cost more than $8 if well...)]]></Long>
+                        <Title>JabpLite</Title>
+                        <Short>A sophisticated free personal finance manager. Includes accounts, categories, standing orders, inv</Short>
+                        <Long>A sophisticated free personal finance manager. Includes accounts, categories, standing orders, investments, currencies and much more.  Home page  http://www.freepoc.org.  Other features in JabpLite: Future Balance prediction, Net Worth calculation, R</Long>
                     </DefaultDescription>
-                    <Description Language="fr_FR">
-                        <Title><![CDATA[GO Locker Pro]]></Title>
-                        <Short><![CDATA[GO Locker Pro est une version indépendante et premium de GO Locker !]]></Short>
-                        <Long><![CDATA[GO Locker Pro est une version indépendante et premium de GO Locker !]]></Long>
-                    </Description>
                 </Descriptions>
-                <Prices>
-                    <DefaultPrice Currency="USD">
-                        <Regular>0.99</Regular>
-                    </DefaultPrice>
-                    <Price Currency="EUR">
-                        <Regular>0.99</Regular>
-                    </Price>
-                </Prices>
-                <AgeLimit>
-                  <AgeMin>6</AgeMin>
-                  <AgeMax>12</AgeMax>
-                </AgeLimit>
                 <Medias>
-                    <Icon><![CDATA[http://playground.devceble.telechargement.fr/apk/media/go-locker-pro.png]]></Icon>
-                    <Screenshot><![CDATA[http://playground.devceble.telechargement.fr/apk/media/go-locker-scr1.jpg]]></Screenshot>
-                    <Screenshot><![CDATA[http://playground.devceble.telechargement.fr/apk/media/go-locker-scr2.jpg]]></Screenshot>
-                    <Screenshot><![CDATA[http://playground.devceble.telechargement.fr/apk/media/go-locker-scr3.jpg]]></Screenshot>
-                    <Screenshot><![CDATA[http://playground.devceble.telechargement.fr/apk/media/go-locker-scr4.jpg]]></Screenshot>
+                    <Icon>http://dwn.getjar.mobi/icon-50x50/7c/887_thm.png</Icon>
+                    <Screenshot>http://dwn.getjar.mobi/ss/7c/887.jpg</Screenshot>
                 </Medias>
-            </AndroidApp>
+                <Package>
+                    <Name>org.microemu.android.JabpLite.JabpLite</Name>
+                    <Version>1</Version>
+                    <IsEncrypted>0</IsEncrypted>
+                    <Filename>org.microemu.android.JabpLite.JabpLite.apk</Filename>
+                </Package>
+            </FreeAndroidApp>
+            <FreeAndroidApp>
+                <Sku>com.rdmplus</Sku>
+                <Developer>Shape</Developer>
+                <Category>103</Category>
+                <Descriptions>
+                    <DefaultDescription>
+                        <Title>RDM+ Remote Desktop</Title>
+                        <Short>Access and control your Mac or Windows PC remotely right from your mobile device with RDM+</Short>
+                        <Long>Access and control your Mac or Windows PC remotely right from your mobile device with RDM+ Remote Desktop app. Don't be tied to your home or office computer. Send and receive e-mails, edit documents, surf the web, manage files and do hundred other things that you usually do on your desktop, even when you are on a business trip or stuck in a traffic jam.Simply install mobile application on your Android and RDM+ Desktop on the remote computer and RDM+ is ready to use. No need to adjust any firewall or router settings."In a short time, your desktop's screen will be displayed on your Android phone and you can pretty much do whatever it is that you want to do."ANDROID-APPS.COMWhy RDM+ is really a must-have tool for you?- Sometimes you need to check or edit your documents, and your computer is nowhere near you. Do it easily using familiar mouse commands, standard Windows and Mac hotkeys. Pinch to zoom in/zoom out. - Copy, rename, delete files, send them from PC to your Android and vice versa with built-in file manager. - System Manager: see how your desktop is doing while you are away from home. Check and change system settings, execute command line commands, control running processes.- Works via both WiFi and carrier data network.- Ultimate security level makes your data exchange absolutely safe. Master password protects  list of your computers, so even if your device is stolen or lost, noone could access your information. - Easy access for enterprise users through NAT and Firewall as well as for individual users with dynamic IPs.- No hidden costs. Application price is a one-time fee. Connect to any number of your desktop computers without any additional charges.- Available in English, Spanish, German, French and Italian.Note: Free RDM+ Desktop application should be installed on each computer you want to have access to. Download it from rdmplus.com web site.Supports Intel-based Macs running on Mac OS X 10.4 Tiger, 10.5 Leopard, 10.6 Snow Leopard, 10.7 Lion,Microsoft Windows 2000 / 2003 / XP / Vista / 2008 / 7.Retina display (HiDPI mode) is not yet supported.Keywords: remote, desktop, access, control, file, system, manager, shutdown, administration, hotkeys, service, rdmplus, windows, mac</Long>
+                    </DefaultDescription>
+                </Descriptions>
+                <Medias>
+                    <Icon>https://lh4.ggpht.com/gCZr_Nq29__MhaC08RFbsGOpe9yJb31XFeV5_LDVagdlX9TE05-Zdtthq2kY2lpsPA=w300</Icon>
+                    <Screenshot>https://lh6.ggpht.com/W4dq7r90OaD5rkxhFuzDmRWMw6Zkc7KNGPJO6JO_1XvoslcgxZVXaha0BrqFGduGgww=h310</Screenshot>
+                    <Screenshot>https://lh4.ggpht.com/wzKEeJ2JsPMRdHCSbv0s5KF7gerkRtPNwZiLsqqu44xq0iqbygpqHBoeQWK7MSv8dA=h310</Screenshot>
+                    <Screenshot>https://lh5.ggpht.com/OkGG7GCUJcULBG4XqFiCTVSyX1O4XGV0I-fQpn42PU_Wc7OVMGFEKOX1ZeR5juYvqi0=h310</Screenshot>
+                    <Screenshot>https://lh4.ggpht.com/jJbDfqg_hIRuCk0egWwiWUlGNBhWUH7btNbuoqBGkSYtOaKe-IuWX_KT_u3Q5F-fGQ=h310</Screenshot>
+                    <Screenshot>https://lh4.ggpht.com/rNuNmoTxdnhy9IDUop9hfkQZ_mUOz9A--tV8VlVSap5xKldfh4GsU5k9s_XoS1H_KoE=h310</Screenshot>
+                    <Screenshot>https://lh6.ggpht.com/mq8rNZJ_U0AEnnmT15HWBh7Mft7xXSpqVZmAK6AHonRFf0eBKsYueKRELf6rq6h1b_vQ=h310</Screenshot>
+                    <Screenshot>https://lh3.ggpht.com/p4YNIBrPPEXeYvyOhUesYhqq5zs7Nv_vKH0Vd9LTTsMoM66s_CPwLrvMLeBHc-WmkdnS=h310</Screenshot>
+                </Medias>
+                <Package>
+                    <Name>com.rdmplus</Name>
+                    <Version>85</Version>
+                    <IsEncrypted>0</IsEncrypted>
+                    <Filename>com.rdmplus.apk</Filename>
+                </Package>
+            </FreeAndroidApp>
         </Apps>
     </Message>
 </NexwayConnect>
