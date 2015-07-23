@@ -2,7 +2,7 @@
 <!-- "$Revision: #3.2 $" -->
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
     <!--
-    $Date: 2013/12/16 $
+    $Date: 2015/07/23 $
     NEXWAY.COM CONFIDENTIAL. This document and the information contained in it are
     confidential and proprietary information of nexway and may not be reproduced,
     distributed or used, in whole or in part, for any purpose other than as necessary
@@ -32,6 +32,43 @@
                         <xsd:enumeration value="6"/>
                         <xsd:enumeration value="9"/>
                         <xsd:enumeration value="12"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <!-- TAppRating -->
+    <xsd:complexType name="TAppRating">
+        <xsd:sequence>
+            <!-- Age -->
+            <xsd:element name="Age">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:enumeration value="0"/>
+                        <xsd:enumeration value="3"/>
+                        <xsd:enumeration value="4"/>
+                        <xsd:enumeration value="6"/>
+                        <xsd:enumeration value="7"/>
+                        <xsd:enumeration value="12"/>
+                        <xsd:enumeration value="15"/>
+                        <xsd:enumeration value="16"/>
+                        <xsd:enumeration value="18"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+            <!-- Description -->
+            <xsd:element name="Description" minOccurs="0">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:enumeration value="Violence"/>
+                        <xsd:enumeration value="Online"/>
+                        <xsd:enumeration value="Language"/>
+                        <xsd:enumeration value="Sex"/>
+                        <xsd:enumeration value="Drugs"/>
+                        <xsd:enumeration value="Fear"/>
+                        <xsd:enumeration value="Gambling"/>
+                        <xsd:enumeration value="Discrimination"/>
                     </xsd:restriction>
                 </xsd:simpleType>
             </xsd:element>
@@ -83,12 +120,12 @@
         <xsd:sequence>
             <xsd:choice>
                 <!-- AndroidApp -->
-                <xsd:element name="AndroidApp" type="TAndroidApp" />
-                <xsd:element name="FreeAndroidApp" type="TFreeAndroidApp" />
+                <xsd:element name="AndroidApp" type="TAndroidApp" maxOccurs="10" />
+                <xsd:element name="FreeAndroidApp" type="TFreeAndroidApp" maxOccurs="10" />
                 <!-- /AndroidApp -->
             </xsd:choice>
         </xsd:sequence>
-        <xsd:attribute name="Type" use="required" type="TAppType"/>
+        <xsd:attribute name="Type" type="TAppType"/>
     </xsd:complexType>
 
     <!-- TApp -->
@@ -148,19 +185,39 @@
         </xsd:sequence>
     </xsd:complexType>
 
+    <!-- APK type -->
+    <xsd:complexType name="TAndroidAppApk">
+        <xsd:sequence>
+            <xsd:element name="Name" type="xsd:string"/>
+            <xsd:element name="Version" type="xsd:string"/>
+            <xsd:element name="IsEncrypted">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:enumeration value="0"/>
+                        <xsd:enumeration value="1"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="Filename" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
     <!-- TAndroidApp -->
     <xsd:complexType name="TAndroidApp">
         <xsd:complexContent>
             <xsd:restriction base="TApp">
                 <xsd:all>
+                    <xsd:element name="Developer" type="xsd:string" minOccurs="0"/>
                     <xsd:element name="Sku" type="xsd:string"/>
                     <xsd:element name="SellTo" type="TSellTo" minOccurs="0"/>
-                    <xsd:element name="Category" type="TCategories"/>
+                    <xsd:element name="Category" type="TCategoryOrTCategories"/>
                     <xsd:element name="Descriptions" type="TDescriptions"/>
                     <xsd:element name="Prices" type="TPrices"/>
                     <xsd:element name="AgeLimit" type="TAppAgeLimit" minOccurs="0"/>
+                    <xsd:element name="Rating" type="TAppRating" minOccurs="0"/>
                     <xsd:element name="Related" type="TSkuList" minOccurs="0"/>
                     <xsd:element name="Items" type="TAppItems" minOccurs="0"/>
+                    <xsd:element name="Package" type="TAndroidAppApk" minOccurs="0"/>
                     <!-- Media element -->
                     <xsd:element name="Medias" type="TAppMedias"/>
                 </xsd:all>
@@ -173,13 +230,16 @@
         <xsd:complexContent>
             <xsd:restriction base="TAndroidApp">
                 <xsd:all>
+                    <xsd:element name="Developer" type="xsd:string" minOccurs="0"/>
                     <xsd:element name="Sku" type="xsd:string"/>
                     <xsd:element name="SellTo" type="TSellTo" minOccurs="0"/>
-                    <xsd:element name="Category" type="TCategories"/>
+                    <xsd:element name="Category" type="TCategoryOrTCategories"/>
                     <xsd:element name="Descriptions" type="TDescriptions"/>
                     <xsd:element name="AgeLimit" type="TAppAgeLimit" minOccurs="0"/>
+                    <xsd:element name="Rating" type="TAppRating" minOccurs="0"/>
                     <xsd:element name="Related" type="TSkuList" minOccurs="0"/>
                     <xsd:element name="Items" type="TAppItems" minOccurs="0"/>
+                    <xsd:element name="Package" type="TAndroidAppApk" minOccurs="0"/>
                     <!-- Media element -->
                     <xsd:element name="Medias" type="TAppMedias"/>
                 </xsd:all>
